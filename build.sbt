@@ -1,3 +1,8 @@
+lazy val coverageSettings = Seq(
+  coverageMinimum := 80,
+  coverageFailOnMinimum := false
+)
+
 lazy val publishSettings = Seq(
   name := "sbt-directive",
   licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html")),
