@@ -34,10 +34,12 @@ lazy val cli = (project in file("cli")).settings(
   publishSettings
 )
 
-lazy val root = (project in file(".")).settings(
+lazy val root = (project in file("."))
+  .settings(
   sbtPlugin := true,
   commonSettings,
   publishSettings,
   scalaVersion := "2.10.6",
-  testSettings
+  testSettings,
+  coverageSettings
 ).aggregate(cli)

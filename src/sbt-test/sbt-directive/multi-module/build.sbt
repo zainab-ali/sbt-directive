@@ -10,7 +10,8 @@ lazy val kernel = (project in file("kernel")).settings(
   directiveSettings,
   preprocessors += directive.Preprocess.lines("strip") {
     "lines => Nil"
-  }
+  },
+  libraryDependencies += "org.scoverage" %% "scalac-scoverage-runtime" % "1.1.1" % DirectivePlugin.DirectiveConfig
 )
 
 lazy val core = (project in file("core"))

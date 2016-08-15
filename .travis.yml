@@ -4,7 +4,7 @@ scala:
   - 2.10.6
 
 script:
-  - sbt clean coverage publish-local scripted test coverageReport 
+  - sbt clean coverage test publish-local scripted coverageReport
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
